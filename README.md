@@ -8,9 +8,9 @@ Benefits
 
 ### It's Small
 
-I mean its tiny. At the time of writing, it weighs in at only 647 bytes when 
-minified. A template engine should not only make your code easier to write
-and maintain, but make it smaller. 
+I mean its tiny. At the time of writing, it weighs in at only 636 bytes when 
+minified (414 bytes gzipped). A template engine should not only make your code 
+easier to write and maintain, but make it smaller. 
 
 If you're developing for mobile devices and using a template engine thats 3KB 
 or 4KB, then unless you have dozens of templates, the extra code needed to 
