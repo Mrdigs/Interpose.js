@@ -61,7 +61,7 @@ console.log(compile('<?js= this ?>').apply('"><script>alert("XSS Hacked!");'));
 console.log(compile('<?js print(this) ?>').apply('"><script>alert("XSS Hacked!");'));
 console.log(compile('<?js echo(this) ?>').apply('"><script>alert("XSS Hacked!");'));
 
-```
+```javascript
 &quot;&gt&lt;script&gtalert(&quot;XSS Hacked!&quot;);
 &quot;&gt&lt;script&gtalert(&quot;XSS Hacked!&quot;);
 "><script>alert("XSS Hacked!"); 
