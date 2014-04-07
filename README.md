@@ -32,7 +32,7 @@ override them. To use the common handlebar or moustache delimiters:
 
 ```javascript
 var compile = interpose.init('{{','}}');
-var template = compile('<li><{{= this.pet }}</li>');
+var template = compile('<li>{{= this.pet }}</li>');
 template.apply({ pet : 'Dog'});
 template.apply({ pet : 'Cat'});
 ```
