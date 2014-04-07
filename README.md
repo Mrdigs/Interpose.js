@@ -44,7 +44,7 @@ to write them, without having to learn yet another language.
 
 ```javascript
 var compile = interpose.init('<%','%>');
-var template = compile('<%for (var i = )%><li><%=this[i].pet%> go "<%=this[i].sound%>"</li><%}%>');
+var template = compile('<%for (var i = 0; i<this.length; i++) {%><li><%=this[i].pet%> go "<%=this[i].sound%>"</li><%}%>');
 template.apply([{ pet : 'Dogs', sound : 'Woof'}, { pet : 'Cats', sound : 'Meow'}]);
 ```
 
@@ -60,8 +60,9 @@ var compile = interpose.init();
 console.log(compile('<?js= this ?>').apply('"><script>alert("XSS Hacked!");'));
 console.log(compile('<?js print(this) ?>').apply('"><script>alert("XSS Hacked!");'));
 console.log(compile('<?js echo(this) ?>').apply('"><script>alert("XSS Hacked!");'));
+```
 
-```javascript
+```
 &quot;&gt&lt;script&gtalert(&quot;XSS Hacked!&quot;);
 &quot;&gt&lt;script&gtalert(&quot;XSS Hacked!&quot;);
 "><script>alert("XSS Hacked!"); 
